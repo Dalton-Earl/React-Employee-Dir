@@ -35,7 +35,7 @@ const reducer = (state, action) => {
         case REMOVE_EMPLOYEES:
           return{
             ...state,
-            employees: state.employees.filter((post)=>{
+            employees: state.employees.filter((employee)=>{
               return employee._id !== action._id;
             })
           }

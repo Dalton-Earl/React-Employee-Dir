@@ -21,12 +21,7 @@ function Detail(props) {
               <p>BODY</p>
             </article>
           </Col>
-          {/* Replace `false` to check if the current post is in the favorites list */}
-          {false ? (
-            <button className="btn btn-danger">Remove from Favorites!</button>
-          ) : (
-            <button className="btn">❤️ Add to Favorites</button>
-          )}
+          
         </Row>
         <Row>
           <Col size="md-2">

@@ -5,32 +5,32 @@ const db = require("../models");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
 
-const bookSeed = [
+const EmployeeSeed = [
   {
-    title: "Hello World",
-    author: "admin",
-    body:
-      "Welcome to your first post! To create posts create a title and body. Don't forget to include your screen name!",
-    date: new Date(Date.now())
+    name: "dalton earl",
+  title: "proprietor",
+  department: "everywhere",
+  Email: "Dalton@everyhere.com"
+    
   },
   {
-    title: "The Second Post",
-    author: "admin",
-    body:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    date: new Date(Date.now())
+    name: "tarl powers",
+  title: "cool cat",
+  department: "Strin",
+  Email: "tarl.leroy@powers.com"
+    
   },
   {
-    title: "Another One",
-    author: "admin",
-    body:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    date: new Date(Date.now())
+    name: "tori",
+  title: "wife",
+  department: "String",
+  Email: "tori@wife.com"
+   
   }
 ];
 
-db.Post.remove({})
-  .then(() => db.Post.collection.insertMany(bookSeed))
+db.Employee.remove({})
+  .then(() => db.Employee.collection.insertMany(EmployeeSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
