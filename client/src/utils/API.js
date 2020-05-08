@@ -2,19 +2,19 @@ import axios from "axios";
 
 export default {
   // Gets all posts
-  getPosts: function() {
-    return axios.get("/api/posts");
+  getEmployees: function() {
+    return axios.get("/api/employee");
   },
   // Gets the post with the given id
-  getPost: function(id) {
-    return axios.get("/api/posts/" + id);
+  getEmployee: function(id) {
+    return axios.get("/api/employee/" + id);
   },
   // Deletes the post with the given id
-  deletePost: function(id) {
-    return axios.delete("/api/posts/" + id);
+  deleteEmployee: function(id) {
+    return axios.delete("/api/employee/" + id);
   },
   // Saves a post to the database
-  savePost: function(postData) {
-    return axios.post("/api/posts", postData);
+  saveEmployee: function(employeeData) {
+    return axios.post("/api/eployee", employeeData);
   }
 };
