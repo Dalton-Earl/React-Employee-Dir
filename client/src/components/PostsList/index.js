@@ -36,16 +36,16 @@ const EmployeeList = () => {
   }, []);
   return (
     <div>
-      <h1>All Blog Posts</h1>
-      <h3 className="mb-5 mt-5">Click on a post to view</h3>
-      {/* Replace `[]` with the appropriate arrays */}
+      <h1>All Employees</h1>
+      <h3 className="mb-5 mt-5">Click on an Employee to view</h3>
+      
       {state.employees.length ? (
         <List>
           {state.employees.map(employee => (
             <ListItem key={employee._id}>
               <Link to={"/posts/" + employee._id}>
                 <strong>
-                  {employee.name} {employee.email} {employee.title} {employee.department}
+                  {employee.name} {employee.Email} {employee.title} {employee.department}
                 </strong>
               </Link>
               <DeleteBtn onClick={() => removeEmployee(employee._id)} />

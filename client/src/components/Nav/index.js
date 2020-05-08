@@ -1,4 +1,5 @@
 import React from "react";
+import { StoreProvider } from "../../utils/GlobalState";
 
 const Nav = () => {
   return (
@@ -7,9 +8,7 @@ const Nav = () => {
         Your personal CMS
       </a>
       {/* Display this if the current state is loading */}
-      {/* <a className="navbar-brand ml-auto">
-          Loading...
-        </a> */}
+      {StoreProvider.loading ? <a> Loading...</a> : <></>}
     </nav>
   );
 };

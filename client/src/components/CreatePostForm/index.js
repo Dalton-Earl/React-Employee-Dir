@@ -15,13 +15,13 @@ const CreateEmployeeForm = () => {
       name: nameRef.current.value,
       title: titleRef.current.value,
       department: departmentRef.current.value,
-      email: emailRef.current.value
+      Email: emailRef.current.value
 
     })
     .then(result =>{
       dispatch({
         type: ADD_EMPLOYEES,
-        post: result.data
+        employee: result.data
       });
     })
     .catch(err => console.log(err));
